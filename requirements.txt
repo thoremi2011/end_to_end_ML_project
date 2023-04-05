@@ -1,0 +1,6 @@
+pandas
+numpy
+seaborn
+traitlets>=4.1.0
+decorator
+-e .
