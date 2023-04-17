@@ -42,7 +42,7 @@ class DataTransformation:
                 ("scaler", StandardScaler())
                 ]
             )
-            logging.info("Numerical columns std scaling and imputation completed")
+            logging.info(f"Numerical columns: {numerical_columns}")
 
             cat_pipeline = Pipeline(
                 steps=[
@@ -51,8 +51,9 @@ class DataTransformation:
                 ("scaler", StandardScaler(with_mean=False))
                 ]
             )
-            logging.info("Categorical columns encoding, imputation and std scaling completed")
 
+            logging.info(f"Categorical columns: {categorical_columns}")
+            
             preprocessor=ColumnTransformer(
                 [
                 ("num_pipeline",num_pipeline,numerical_columns),
