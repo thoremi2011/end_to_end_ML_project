@@ -3,12 +3,12 @@ import sys
 
 import numpy as np
 import pandas as pd
-import pickle
 import dill
 
 from src.exception import CustomException
 from src.logger import logging
 from sklearn.metrics import r2_score
+from sklearn.model_selection import GridSearchCV
 
 def save_object(file_path, obj):
     try:
@@ -21,35 +21,13 @@ def save_object(file_path, obj):
 
     except Exception as e:
         raise CustomException(e, sys)
-
-def evaluate_models(X_train,y_train,X_test,y_test,models):
-    try:
-        report={}
-
-        # for i in range(len(list(models))):
-        #     model = list(models.values())[i]
-            
-        #     model.fit(X_train,y_train) #Train Model
-
-        #     y_train_pred = model.predict(X_train)
-        #     y_test_pred = model.predict(X_test)
-
-        #     train_model_score = r2_score(y_train,y_train_pred)
-        #     test_model_score = r2_score(y_test,y_test_pred)
-
-        #     report[list(models.keys())[i]] = test_model_score
-
-        for model_name, model in models.items():
-            model.fit(X_train, y_train)  # Train Model
-
-            y_train_pred = model.predict(X_train)
-            y_test_pred = model.predict(X_test)
-
-            train_model_score = r2_score(y_train, y_train_pred)
-            test_model_score = r2_score(y_test, y_test_pred)
-
-            report[model_name] = {'train': train_model_score, 'test': test_model_score}
-        return report
-
+    
+def tune_hyperparameters(X_train, y_train, model, params):
+    try:    
+        grid_search = GridSearchCV(model, param_grid=params, scoring='r2', cv=5, n_jobs=-1)
+        grid_search.fit(X_train, y_train)
+        
+        return grid_search.best_estimator_, grid_search.best_score_, grid_search.best_params_
     except Exception as e:
         raise CustomException(e,sys)
+

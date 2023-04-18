@@ -3,6 +3,8 @@ import sys
 from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
+from pprint import pformat
+
 
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
@@ -56,4 +58,6 @@ if __name__=='__main__':
     train_arr,test_arr,_ = data_transformation.initiate_data_transformation(train_data,test_data)
 
     model_trainer = ModelTrainer()
-    print(model_trainer.initiate_model_trainer(train_arr, test_arr))
+    result = model_trainer.initiate_model_trainer(train_arr, test_arr)
+    logging.info("Model training results:\n%s", pformat(result))
+    
