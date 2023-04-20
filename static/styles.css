@@ -1,21 +1,21 @@
 body {
     font-family: "Roboto", sans-serif;
-    background-color: #2B2F6C; /* Dark blue */
-    color: #DE978F; /* Light coral */
+    background-color: #82A3AC; /* Darker blue */
+    color: #D1ACA5; /* Light brown */
 }
 
 .login {
     max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #564779; /* Dark purple */
+    background-color: #A9C7C5; /* Light blue */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
 }
 
 h1,
 h2 {
-    color: #DE978F; /* Light coral */
+    color: #D1ACA5; /* Light brown */
 }
 
 .form-label {
@@ -28,20 +28,20 @@ h2 {
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
-    border: 1px solid #9D6C82; /* Dusty pink */
+    border: 1px solid #BFD8D2; /* Soft green */
     border-radius: 4px;
     margin-bottom: 1rem;
 }
 
 .form-control:focus {
-    border-color: #C17F8B; /* Muted pink */
+    border-color: #E2CFC9; /* Light pink */
     outline: none;
 }
 
 .btn {
     display: inline-block;
-    background-color: #C17F8B; /* Muted pink */
-    color: #DE978F; /* Light coral */
+    background-color: #BFD8D2; /* Soft green */
+    color: #D1ACA5; /* Light brown */
     padding: 0.5rem 1rem;
     font-size: 1rem;
     border: none;
@@ -50,9 +50,9 @@ h2 {
 }
 
 .btn:hover {
-    background-color: #9D6C82; /* Dusty pink */
+    background-color: #E2CFC9; /* Light pink */
 }
 
 .btn:active {
-    background-color: #564779; /* Dark purple */
+    background-color: #A9C7C5; /* Light blue */
 }
