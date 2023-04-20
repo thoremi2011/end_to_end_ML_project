@@ -32,6 +32,7 @@ h2 {
     border: 1px solid #D1C8BC; /* Light beige */
     border-radius: 4px;
     margin-bottom: 1rem;
+    box-sizing: border-box; /* Include padding and border in the total width */
 }
 
 .form-control:focus {
