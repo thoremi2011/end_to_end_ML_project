@@ -1,21 +1,21 @@
 body {
     font-family: "Roboto", sans-serif;
-    background-color: #82A3AC; /* Darker blue */
-    color: #D1ACA5; /* Light brown */
+    background-color: #F3EDE3; /* Beige */
+    color: #5D5D5D; /* Dark gray */
 }
 
 .login {
     max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #A9C7C5; /* Light blue */
+    background-color: #FFFFFF; /* White */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
 }
 
 h1,
 h2 {
-    color: #D1ACA5; /* Light brown */
+    color: #5D5D5D; /* Dark gray */
 }
 
 .form-label {
@@ -28,20 +28,20 @@ h2 {
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
-    border: 1px solid #BFD8D2; /* Soft green */
+    border: 1px solid #D1C8BC; /* Light beige */
     border-radius: 4px;
     margin-bottom: 1rem;
 }
 
 .form-control:focus {
-    border-color: #E2CFC9; /* Light pink */
+    border-color: #B8AB9C; /* Darker beige */
     outline: none;
 }
 
 .btn {
     display: inline-block;
-    background-color: #BFD8D2; /* Soft green */
-    color: #D1ACA5; /* Light brown */
+    background-color: #D1C8BC; /* Light beige */
+    color: #5D5D5D; /* Dark gray */
     padding: 0.5rem 1rem;
     font-size: 1rem;
     border: none;
@@ -50,9 +50,9 @@ h2 {
 }
 
 .btn:hover {
-    background-color: #E2CFC9; /* Light pink */
+    background-color: #B8AB9C; /* Darker beige */
 }
 
 .btn:active {
-    background-color: #A9C7C5; /* Light blue */
+    background-color: #A29C8F; /* Darkest beige */
 }
