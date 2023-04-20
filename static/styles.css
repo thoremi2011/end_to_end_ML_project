@@ -23,7 +23,8 @@ h2 {
     font-weight: 500;
 }
 
-.form-control {
+.form-control,
+.form-control[type="number"] {
     display: block;
     width: 100%;
     padding: 0.5rem;
